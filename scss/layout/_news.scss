@@ -1,0 +1,69 @@
+@use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
+@use "../components/buttons" as btn;
+@use "../layout/flex" as flex;
+@use "../themes/dark--mode";
+
+.news {
+  margin-top: 100px;
+  padding: 96px 0;
+  @include mix.bg(no, var.$bg--dc);
+
+  &--wrapper {
+    @include flex.flex(column, no, no, 64);
+    h2 {
+      @include mix.text(var.$bg--0d, 38, 6, 56);
+    }
+  }
+
+  &--cards {
+    @include flex.flex(no, stretch, space-between, 40);
+    @media (max-width: 1117px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &--card {
+    @include mix.w(400px, no);
+    @include flex.flex(column);
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      @include mix.w(no, 100%);
+    }
+
+    &__body {
+      @include btn.btn(36px, 0 0 20px 20, no, var.$bg--ff);
+      h3 {
+        @include mix.text(var.$bg--0d, 24, 5, 36);
+        margin-bottom: 16px;
+      }
+
+      p {
+        @include mix.text(var.$bg--5b, 16, 5, 28);
+        margin-bottom: 24px;
+      }
+
+      a {
+        @include flex.flex(no, center, no, 8);
+        @include mix.text(var.$bg--f5, 16, 5, 17);
+        &::after {
+          content: "";
+          display: block;
+          width: 22px;
+          height: 10px;
+
+          @include mix.bg(url("../images/components/news_after.svg"), no, no);
+        }
+        &:hover {
+          transform: translateX(20px) scale(1.05);
+        }
+      }
+    }
+  }
+}

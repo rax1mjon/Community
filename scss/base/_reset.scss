@@ -1,0 +1,73 @@
+@use "../utils/functions" as func;
+@use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
+* {
+  margin: 0;
+  padding: 0;
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: var.$bg--ff;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+a,
+button {
+  text-decoration: none;
+  transition: 0.5s;
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transform: scale(1.05);
+  }
+}
+
+.container {
+  $padding: 20;
+  max-width: func.container(1933, 325, $padding);
+  margin: 0 auto;
+  padding: 0 $padding + px;
+}
+
+.backtop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  box-shadow: 0 0 16px 5px rgba(4, 4, 236, 0.425), inset 0 0 0 3px #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  backdrop-filter: blur(3px);
+}
+
+.backtop-show {
+  opacity: 1;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(17, 17, 17);
+  z-index: 111111;
+}

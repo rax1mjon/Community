@@ -1,0 +1,144 @@
+@use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
+@use "../components/buttons" as btn;
+@use "../layout/grid" as grid;
+@use "../layout/forms" as form;
+@use "../layout/flex" as flex;
+@use "../components/dropdown" as drop;
+@use "../themes/dark--mode";
+
+.footer {
+  @include mix.pos(relative);
+  @include mix.bg(no, var.$bg--06);
+  &::before {
+    content: "";
+    @include mix.pos(absolute, no, no, 0, 0);
+    display: inline-block;
+    @include mix.w(no, 53px);
+    @include mix.h(144px);
+    @include mix.bg(no, var.$bg--f5);
+    border-radius: 0 20px 0 0;
+  }
+  &::after {
+    content: "";
+    @include mix.pos(absolute, 38px, 0);
+    display: inline-block;
+    @include mix.w(no, 53px);
+    @include mix.h(287px);
+    @include mix.bg(no, var.$bg--f5);
+    border-radius: 20px 0 0 20px;
+  }
+
+  &--wrapper {
+    @include flex.flex(column, center, no);
+    padding: 80px 70px;
+    color: var.$bg--ff;
+  }
+  &--body {
+    @include flex.flex(no, center, space-between, 20);
+    @include mix.w(no, 100%);
+    margin-bottom: 80px;
+
+    @media (max-width: 1138px) {
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
+
+    &__top {
+      @include flex.flex(column, no, no, 32);
+      @media (max-width: 1138px) {
+        width: 100%;
+        align-items: center;
+      }
+      h2 {
+        @include mix.text(var.$bg--ff, 36, 6, 44);
+        max-width: 351px;
+      }
+    }
+
+    &__social {
+      @include flex.flex(no, center, no, 18);
+      svg {
+        fill: var.$bg--ff;
+        &:hover {
+          fill: var.$bg--f5;
+        }
+      }
+      .instagram {
+        stroke: var.$bg--ff;
+        fill: none;
+        &:hover {
+          stroke: var.$bg--f5;
+          fill: none;
+        }
+      }
+    }
+
+    &__menus {
+      @include flex.flex(no, no, space-between, no);
+      @include mix.w(360px, 100%);
+      ul {
+        @include flex.flex(column, no, no, 16);
+        li {
+          h3 {
+            margin-bottom: 6px;
+          }
+          a {
+            @include mix.text(var.$bg--ff, 16, 4, 24);
+            &:hover {
+              color: var.$bg--f5;
+            }
+          }
+        }
+      }
+    }
+
+    &__form {
+      width: 342px;
+      h3 {
+        @include mix.text(var.$bg--ff, 18, 6, 27);
+        margin-bottom: 24px;
+      }
+      form {
+        @include flex.flex(column, flex-start, space-between, 16);
+        input {
+          outline: none;
+          @include btn.btn(18px 37px, 31, null, var.$bg--ff);
+          @include mix.w(no, 100%);
+          @include mix.text(var.$bg--06, 16, 5, 20);
+
+          &::placeholder {
+            @include mix.text(var.$bg--9c, 16, 5, 20);
+          }
+          &:focus {
+            box-shadow: 2px 2px 6px 1px #f58a07;
+          }
+        }
+        button {
+          @include btn.btn(18px 37px, 31, none, var.$bg--f5);
+          @include mix.text(var.$bg--ff, 18, 6, 20);
+        }
+      }
+    }
+  }
+
+  &--foot {
+    @include flex.flex(no, center, space-between, 20);
+    @include mix.w(no, 100%);
+    @include mix.text(var.$bg--ff, 16, 5, 24);
+    flex-wrap: wrap;
+    &__links {
+      @include flex.flex(no, center, no, 20);
+      a {
+        @include mix.text(var.$bg--ff, 16, 5, 24);
+        &:hover {
+          color: var.$bg--f5;
+        }
+      }
+    }
+  }
+}

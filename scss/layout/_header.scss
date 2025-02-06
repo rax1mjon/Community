@@ -1,0 +1,84 @@
+@use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
+@use "../components/buttons" as btn;
+@use "../layout/grid" as grid;
+@use "../layout/forms" as form;
+@use "../layout/flex" as flex;
+@use "../components/dropdown" as drop;
+@use "../themes/dark--mode";
+@use "../vendors/hamburger";
+
+.header {
+  @include mix.pos(fixed, 0);
+  @include mix.w(no, 100%);
+  @include mix.bg(no, var.$bg--ff);
+  @include mix.p(16);
+  z-index: 111  ;
+  &--wrapper {
+    @include flex.flex(no, center, space-between, 20);
+
+    flex-wrap: wrap;
+  }
+}
+
+.nav {
+  &--brand {
+    @include flex.flex(no, center, space-between, 20);
+
+    @media (max-width: 920px) {
+      width: 100%;
+      .humburger {
+        display: flex !important;
+      }
+    }
+
+    .humburger {
+      @include flex.flex(column, no, center, 7);
+      display: none;
+      width: 40px;
+      height: 40px;
+      span {
+        display: inline-block;
+        height: 6px;
+        border-radius: 1rem;
+        background-color: var.$bg--0d;
+      }
+    }
+  }
+
+  &bar {
+    @include flex.flex(no, center, space-between, 40);
+
+    @media (max-width: 920px) {
+      flex-wrap: wrap;
+      display: none;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    &--menu {
+      @include flex.flex(no, center, space-between, 32);
+      flex-wrap: wrap;
+      @media (max-width: 700px) {
+        justify-content: center;
+      }
+
+      &__link {
+        @include mix.text(var.$bg--39, 16, 6, 24);
+        text-transform: capitalize;
+        &:hover {
+          color: var.$bg--f5;
+        }
+      }
+    }
+
+    &--link {
+      @include btn.btn(17px 32px, 31, null, var.$bg--f5a);
+      @include mix.text(var.$bg--f5, 16, 6, 17);
+    }
+  }
+}
+
+.navbar.navbarActive {
+  display: flex;
+}
