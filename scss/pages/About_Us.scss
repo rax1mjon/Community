@@ -3,5 +3,262 @@
 @use "../components/buttons" as btn;
 @use "../layout/flex" as flex;
 
+.advert {
+  display: flex;
+  gap: 46px;
 
- 
+  .advert_desc {
+    margin-top: 105px;
+
+    .advert_desc_title {
+      width: 618px;
+      // height: 360px;
+      font-family: Poppins;
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 72px;
+      letter-spacing: -0.03em;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #1d3444;
+    }
+
+    .advert_desc_text {
+      margin-top: 24px;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #5b5b5b;
+    }
+
+    .advert_desc_button {
+      margin-top: 32px;
+      color: #ffffff;
+      background: #f58a07;
+      border: none;
+      width: 171px;
+      height: 54px;
+      border-radius: 27px;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 17.04px;
+      // text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
+
+.strategy {
+  margin-top: 85px;
+
+  .strategy_startup {
+    display: flex;
+
+    .strategy_startup_desc {
+      width: 587px;
+      height: 132px;
+      .strategy_startup_desc_title {
+        font-family: Poppins;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 44px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+
+    .strategy_startup_desc_p {
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      width: 620px;
+      height: 102px;
+    }
+  }
+
+  .strategy_clients {
+    margin-top: 64px;
+    display: flex;
+
+    .strategy_clients_card {
+      .strategy_clients_card_title {
+        color: #f58a07;
+        font-family: Inter;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .strategy_clients_card_awards {
+        margin-top: 16px;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 25.56px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .strategy_clients_card_text {
+        margin-top: 16px;
+        color: #5b5b5b;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+}
+
+.local {
+  margin-top: 128px;
+  display: flex;
+  gap: 78px;
+
+  .local_desc {
+    margin-top: 146px;
+    width: 585px;
+    .local_desc_title {
+      font-family: Poppins;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 56px;
+      letter-spacing: -0.03em;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+
+    .local_desc_text {
+      margin-top: 32px;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
+
+.teamwork {
+  .teamwork_title {
+    padding-right: 700px;
+    width: 577px;
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+    // text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .teamwork_text {
+    margin-top: 27px;
+    // width: 721px;
+    // height: 90px;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .teamwork_images {
+    margin-top: 64px;
+    display: flex;
+  }
+}
+
+.dream {
+  margin-top: 128px;
+  display: flex;
+
+  .dream_desc {
+    margin-top: 100px;
+    .dream_desc_title {
+      font-family: Poppins;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 56px;
+      letter-spacing: -0.03em;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+
+    .dream_desc_text {
+      padding-top: 24px;
+      padding-right: 100px;
+      width: 550px;
+      color: #5b5b5b;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+    .dream_desc_profil {
+      padding-top: 50px;
+      padding-right: 400px;
+      display: flex;
+      width: 249px;
+      gap: 20px;
+
+      .dream_desc_profil_date {
+        margin-top: 10px;
+
+        .dream_desc_profil_date_title {
+          color: #1d3444;
+          font-family: Poppins;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 41.04px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+
+        .dream_desc_profil_date_text {
+          color: #f58a07;
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 30.78px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+    }
+  }
+}

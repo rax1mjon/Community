@@ -254,10 +254,11 @@
 }
 
 .cta {
+  background-color: var.$bg--f5;
+  
   &--wrapper {
     @include flex.flex(no, no, center);
   }
-  background-color: var.$bg--f5;
 
   &--decoration {
     min-height: 516px;
