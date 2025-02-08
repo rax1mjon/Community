@@ -6,6 +6,7 @@
 .advert {
   display: flex;
   gap: 46px;
+  margin-top: 150px;
 
   .advert_desc {
     margin-top: 105px;
@@ -165,9 +166,10 @@
 }
 
 .teamwork {
+  margin-top: 96px;
   .teamwork_title {
     padding-right: 700px;
-    width: 577px;
+    // width: 577px;
     font-family: Poppins;
     font-size: 48px;
     font-weight: 600;
@@ -200,6 +202,7 @@
 .dream {
   margin-top: 128px;
   display: flex;
+  margin-bottom: 128px;
 
   .dream_desc {
     margin-top: 100px;
