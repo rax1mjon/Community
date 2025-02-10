@@ -26,14 +26,18 @@
   &--card {
     @include mix.w(400px, no);
     @include flex.flex(column);
-    transition: 0.5s;
+    border-radius: 20px;
+    overflow: hidden;
 
     &:hover {
-      transform: scale(1.1);
+      img {
+        transform: scale(1.1);
+      }
     }
 
     img {
       @include mix.w(no, 100%);
+      transition: 0.5s;
     }
 
     &__body {
