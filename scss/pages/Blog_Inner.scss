@@ -3,6 +3,7 @@
 @use "../components/buttons" as btn;
 @use "../layout/flex" as flex;
 .BlogInner {
+  padding: 128px 0;
   .NameJonsin {
     width: 123px;
     font-size: 16px;
