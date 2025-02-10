@@ -2,11 +2,115 @@
 @use "../utils/variables" as var;
 @use "../components/buttons" as btn;
 @use "../layout/flex" as flex;
-   
-.career{
-h2 {
-  width: 618px;
-height: 288px;
 
+.career1 {
+  margin-top: 85px;
+  .h2-text {
+    width: 618px;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 72px;
+  }
+  .paragraf {
+    padding-top: 24px;
+    width: 557px;
+    font-size: 18px;
+    color: #5b5b5b;
+  }
+  .button-1 {
+    width: 180px;
+    height: 54px;
+    border-radius: 27px;
+    outline: none;
+    background-color: var.$bg--f5;
+    color: var.$bg--ff;
+    border: none;
+    transition: 1s;
+    margin-top: 24px;
+    &:hover {
+      box-shadow: inset 200px 0 var.$bg--06, 10px 5px var.$bg--4a;
+    }
+  }
+  .flex-1 {
+    display: flex;
+    gap: 46px;
+  }
+  @media (max-width: 1370px) {
+    .flex-1 {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 690px) {
+    .img-1 {
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+    }
+    .paragraf {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .h2-text {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 400px) {
+    .h2-text {
+      font-size: 40px;
+    }
+    .paragraf {
+      font-size: 15px;
+    }
+  }
+  .padding-1 {
+    padding-top: 85px;
+  }
 }
+.cards {
+  padding-bottom: 128px;
+  .h2-text-2 {
+    max-width: 676px;
+    font-size: 48px;
+    padding-top: 128px;
+    padding-left: 40px;
+    margin-bottom: 64px;
+  }
+  .card-few {
+    max-width: 400px;
+    background-color: var.$bg--c1;
+    border-radius: 10px;
+    padding: 40px;
+    .p-text {
+      font-size: 24px;
+    }
+    .paragraf-2 {
+      max-width: 184px;
+      font-size: 18px;
+      color: var.$bg--39;
+      padding-top: 8px;
+    }
+    .paragraf-3 {
+      max-width: 95px;
+      font-size: 18px;
+      color: var.$bg--f5;
+      padding-top: 32px;
+    }
+  }
+  .card-flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
 }

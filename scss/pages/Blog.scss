@@ -3,3 +3,85 @@
 @use "../components/buttons" as btn;
 @use "../layout/flex" as flex;
 
+.news-First-news {
+  background-color: var.$bg--ff;
+  .all-post {
+    padding-top: 128px;
+  }
+  .news--card__body {
+    background-color: var.$bg--dc;
+  }
+  .news--cards {
+    padding-bottom: 128px;
+  }
+}
+
+.blog-section {
+  background-color: var.$bg--dc;
+  .NameJonson {
+    width: 123px;
+    font-size: 16px;
+    color: var.$bg--39;
+  }
+  .paragrafTwo {
+    width: 230px;
+    font-size: 16px;
+    color: var.$bg--39;
+  }
+  .flex-Andrew {
+    margin-top: 100px;
+    display: flex;
+    gap: 16px;
+    padding-top: 130px;
+    flex-wrap: wrap;
+  }
+  .h2-internal {
+    max-width: 527px;
+    font-size: 64px;
+    color: var.$bg--1d;
+    padding-top: 24px;
+  }
+  .paragraf-end {
+    max-width: 559px;
+    font-size: 18px;
+    color: var.$bg--5b;
+    padding-top: 24px;
+  }
+  .icon-paragraf {
+    width: 86px;
+    font-size: 16px;
+    color: var.$bg--f5;
+  }
+  .flex-icon {
+    display: flex;
+    gap: 3px;
+    padding-top: 24px;
+    align-items: center;
+  }
+  .PingPong {
+    display: flex;
+    gap: 33px;
+    padding-bottom: 128px;
+    align-items: center;
+  }
+  .imgpong {
+    margin-top: 200px;
+  }
+  @media (max-width: 1260px) {
+    .PingPong {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 625px) {
+    .imgpong {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 310px) {
+    .h2-internal {
+      font-size: 40px;
+    }
+  }
+}

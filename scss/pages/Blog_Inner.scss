@@ -2,5 +2,59 @@
 @use "../utils/variables" as var;
 @use "../components/buttons" as btn;
 @use "../layout/flex" as flex;
-
-
+.BlogInner {
+  .NameJonsin {
+    width: 123px;
+    font-size: 16px;
+    color: var.$bg--39;
+  }
+  .paragrafTwo {
+    width: 230px;
+    font-size: 16px;
+    color: var.$bg--39;
+  }
+  .flex-Andrew {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .h2Text-one {
+    margin: 0 auto;
+    width: 760px;
+    font-size: 64px;
+    color: var.$bg--1d;
+    padding-top: 24px;
+  }
+  .paragraf-four {
+    width: 760px;
+    font-size: 16px;
+    padding-top: 32px;
+    margin: 0 auto;
+    color: var.$bg--5b;
+  }
+  .h2Text-two {
+    width: 760px;
+    font-size: 48px;
+    color: var.$bg--0d;
+    margin: 0 auto;
+    padding-top: 32px;
+  }
+  @media (max-width: 1370px) {
+    .img-width {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 695px) {
+    .h2Text-two {
+      max-width: 100%;
+    }
+    .h2Text-one {
+      max-width: 100%;
+    }
+    .paragraf-four {
+      max-width: 100%;
+    }
+  }
+}
